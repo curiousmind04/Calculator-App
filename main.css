@@ -7,6 +7,229 @@
 }
 
 body {
+  background-color: hsl(222, 26%, 31%);
   font-family: "League Spartan", sans-serif;
   font-size: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+header {
+  width: 88%;
+  max-width: 34rem;
+  padding-left: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.header-right p {
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  margin-right: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+/* Tristate Toggle Switch */
+
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toggle-labels {
+  width: 4.4rem;
+  padding: 0 4px;
+  color: #fff;
+  font-size: 0.75rem;
+  margin-bottom: 0.3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.toggle-labels :nth-child(2) {
+  padding-left: 2px;
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(224, 36%, 15%);
+  width: 4.4rem;
+  height: 1.6rem;
+  border-radius: 20px;
+  padding: 0 3px;
+}
+
+.custom-radio-button {
+  width: 17px;
+  height: 17px;
+  /* border: 1px solid #fff; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-radio-button input {
+  display: none;
+}
+
+.custom-radio-button .checkmark {
+  width: 15px;
+  height: 15px;
+  background-color: hsl(6, 63%, 50%);
+  border-radius: 50%;
+  /* display: inline-block; */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-radio-button input:checked + .checkmark {
+  opacity: 1;
+  /* display: inline-block; */
+}
+
+.custom-radio-button {
+  cursor: pointer;
+}
+
+/*  */
+
+main {
+  width: 88%;
+  max-width: 34rem;
+}
+
+.output-screen {
+  color: #fff;
+  background-color: hsl(224, 36%, 15%);
+  font-size: 2.5rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1.4rem;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+  padding: 1.6rem 1.5rem;
+}
+
+.output-screen .output {
+  width: 100%;
+  overflow-wrap: break-word;
+  text-align: end;
+}
+
+.buttons-container {
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.buttons-container button {
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  height: 4rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  font: inherit;
+  text-transform: uppercase;
+  box-shadow: 0 4px 0 hsla(28, 16%, 65%, 0.9);
+  padding-top: 6px;
+  cursor: pointer;
+}
+
+#reset {
+  background-color: hsl(225, 21%, 49%);
+  color: #fff;
+  grid-column: span 2;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 0 hsla(224, 28%, 35%, 0.9);
+}
+
+#equals {
+  background-color: hsl(6, 63%, 50%);
+  color: #fff;
+  font-size: 1.2rem;
+  grid-column: span 2;
+  box-shadow: 0 4px 0 hsla(6, 70%, 34%, 0.9);
+}
+
+#del {
+  background-color: hsl(225, 21%, 49%);
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 0 hsla(224, 28%, 35%, 0.9);
+}
+
+#multiplication {
+  font-size: 1.2rem;
+}
+
+@media (hover: hover) {
+  .buttons-container button:hover {
+    background-color: #fff;
+  }
+  #reset:hover,
+  #del:hover {
+    background-color: hsl(225, 35%, 63%);
+  }
+  #equals:hover {
+    background-color: hsl(6, 90%, 67%);
+  }
+  .custom-radio-button input:checked + .checkmark:hover {
+    background-color: hsl(6, 90%, 67%);
+  }
+}
+
+@media (min-width: 34rem) {
+  body {
+    padding: 3rem 0;
+  }
+  .toggle-labels {
+    font-size: 0.9rem;
+  }
+  .output-screen {
+    padding: 2.5rem 2rem;
+  }
+  .output-screen .output {
+    font-size: 3.4rem;
+  }
+  .buttons-container {
+    padding: 2rem;
+    gap: 1.6rem;
+  }
+  .buttons-container button {
+    border-radius: 0.6rem;
+    font-size: 2.4rem;
+  }
+  #reset,
+  #equals,
+  #del,
+  #multiplication {
+    font-size: 1.7rem;
+  }
 }
