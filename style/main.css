@@ -94,14 +94,12 @@ h1 {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  /* display: inline-block; */
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .custom-radio-button input:checked + .checkmark {
   opacity: 1;
-  /* display: inline-block; */
 }
 
 .custom-radio-button {
@@ -120,12 +118,12 @@ main {
   border-radius: 0.8rem;
   margin-bottom: 1.4rem;
   display: flex;
-  /* justify-content: flex-end; */
   align-items: center;
   padding: 1.6rem 1.5rem;
 }
 
 .output-screen .output {
+  min-height: 2.5rem;
   width: 100%;
   overflow-wrap: break-word;
   text-align: end;
@@ -177,9 +175,10 @@ main {
   }
   .output-screen {
     padding: 2.5rem 2rem;
+    font-size: 3.4rem;
   }
   .output-screen .output {
-    font-size: 3.4rem;
+    min-height: 3.4rem;
   }
   .buttons-container {
     padding: 2rem;
